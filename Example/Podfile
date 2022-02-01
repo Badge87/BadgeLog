@@ -2,8 +2,10 @@ use_frameworks!
 
 platform :ios, '15.0'
 
+
 target 'BadgeLog_Example' do
   pod 'BadgeLog', :path => '../'
+  
 
   target 'BadgeLog_Tests' do
     inherit! :search_paths
@@ -13,4 +15,22 @@ target 'BadgeLog_Example' do
     pod 'FBSnapshotTestCase' 
     pod 'Nimble-Snapshots' 
   end
+end
+
+
+class Pod::Target::BuildSettings::AggregateTargetSettings
+    alias_method :ld_runpath_search_paths_original, :ld_runpath_search_paths
+
+    def ld_runpath_search_paths
+        return ld_runpath_search_paths_original unless configuration_name == "Debug"
+        return (ld_runpath_search_paths_original || []) + (framework_search_paths || [])
+    end
+end
+
+class Pod::Target::BuildSettings::PodTargetSettings
+    alias_method :ld_runpath_search_paths_original, :ld_runpath_search_paths
+
+    def ld_runpath_search_paths
+        return (ld_runpath_search_paths_original || []) + (framework_search_paths || [])
+    end
 end

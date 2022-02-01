@@ -57,6 +57,16 @@ public final class Logger {
         
     }
     
+    public func generateLogDocument() -> LogFile {
+        do {
+        if let url = fileLogger.logFileURL{
+            return try LogFile(url: url)
+        }
+        }catch {}
+        return LogFile()
+        
+    }
+    
 }
 
 
@@ -108,7 +118,7 @@ extension Logger {
             result += " : \(error!)"
         }
         
-        return message
+        return result
     }
     
     static func logLevelToLevel(level: LogLevel) -> SwiftyBeaver.Level {
