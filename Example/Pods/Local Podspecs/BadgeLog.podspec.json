@@ -1,0 +1,29 @@
+{
+  "name": "BadgeLog",
+  "version": "0.1.0",
+  "summary": "A short description of BadgeLog.",
+  "swift_versions": "5.0",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Badge87/BadgeLog",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Badge87": "bacdaniele@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/Badge87/BadgeLog.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "15.0"
+  },
+  "source_files": "BadgeLog/Classes/**/*",
+  "dependencies": {
+    "SwiftyBeaver": [
+
+    ]
+  },
+  "swift_version": "5.0"
+}

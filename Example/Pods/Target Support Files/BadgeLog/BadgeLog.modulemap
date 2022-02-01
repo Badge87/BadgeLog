@@ -1,0 +1,6 @@
+framework module BadgeLog {
+  umbrella header "BadgeLog-umbrella.h"
+
+  export *
+  module * { export * }
+}

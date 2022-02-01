@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import BadgeLog
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        Logger.shared.setup()
+        Logger.shared.info("Sono una info")
+        Logger.shared.debug("Sono un debug")
+        Logger.shared.warning("Sono un warning")
+        Logger.shared.verbose("Sono un verbose")
+        Logger.shared.error("Sono un errore")
         return true
     }
 
