@@ -29,9 +29,6 @@ public final class Logger {
     let internalLogger = SwiftyBeaver.self
     var fileLogger: FileDestination!
     var consoleLogger: ConsoleDestination!
-
-    
-    
     
     public func setup(){
         

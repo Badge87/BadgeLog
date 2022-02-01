@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'BadgeLog'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of BadgeLog.'
+  s.summary          = 'BadgeLog, a light lib that helps and centralize logs in your application.'
   s.swift_version    = '5.0'
 
 # This description is used to generate tags and improve search results.
@@ -26,7 +26,7 @@ TODO: Add long description of the pod here.
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Badge87' => 'bacdaniele@gmail.com' }
-  s.source           = { :git => 'https://github.com/Badge87/BadgeLog.git', :tag => s.version.to_s }
+  s.source           = { :git => 'git@github.com: Badge87/BadgeLog.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '15.0'
