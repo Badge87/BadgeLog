@@ -70,6 +70,10 @@ it, simply add the following line to your Podfile:
 pod 'BadgeLog'
 ```
 
+## External libraries
+
+- [Swift Bearer](https://github.com/SwiftyBeaver)
+
 ## Author
 
 Badge87, bacdaniele@gmail.com
