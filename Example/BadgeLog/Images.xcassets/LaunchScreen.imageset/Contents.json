@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "BadgeLog_trasparent_200.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "BadgeLog_trasparent_400.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "BadgeLog_trasparent_600.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
