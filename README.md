@@ -46,7 +46,7 @@ The library is ready to log in! to log in, simply call up:
 Logger.shared.verbose("I'm a verbose log!")
 Logger.shared.debug("I'm a debug log!")
 Logger.shared.info("I'm a info log!")
-Logger.shared.warning("I'm a warning log!"
+Logger.shared.warning("I'm a warning log!")
 Logger.shared.error("I'm an error log!")
 Logger.shared.error("I'm an error log!", error: NSError(domain: "", code: 999, userInfo: [NSLocalizedDescriptionKey: "Fake Exception"]))
 ```
