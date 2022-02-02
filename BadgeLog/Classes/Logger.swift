@@ -68,26 +68,26 @@ public final class Logger {
 
 
 extension Logger: Logging {
-    public func info(_ message: String, error: NSError?) {
-        log(.info, message, error: error)
+    public func info(_ message: String, error: NSError? = nil, file:String = #file, function: String = #function, line: Int = #line) {
+        log(.info, message, error: error, file: file, function: function, line: line)
     }
     
-    public func debug(_ message: String, error: NSError?) {
-        log(.debug, message, error: error)
+    public func debug(_ message: String, error: NSError? = nil, file:String = #file, function: String = #function, line: Int = #line) {
+        log(.info, message, error: error, file: file, function: function, line: line)
     }
-    public func warning(_ message: String, error: NSError?) {
-        log(.warning, message, error: error)
+    public func warning(_ message: String, error: NSError? = nil, file:String = #file, function: String = #function, line: Int = #line) {
+        log(.info, message, error: error, file: file, function: function, line: line)
     }
-    public func verbose(_ message: String, error: NSError?) {
-        log(.verbose, message, error: error)
+    public func verbose(_ message: String, error: NSError? = nil, file:String = #file, function: String = #function, line: Int = #line) {
+        log(.info, message, error: error, file: file, function: function, line: line)
     }
-    public func error(_ message: String, error: NSError?) {
-        log(.error, message, error: error)
+    public func error(_ message: String, error: NSError? = nil, file:String = #file, function: String = #function, line: Int = #line) {
+        log(.info, message, error: error, file: file, function: function, line: line)
     }
     
-    internal func log(_ level: LogLevel, _ message: String, error: NSError?) {
+    internal func log(_ level: LogLevel, _ message: String, error: NSError?, file: String = #file, function: String = #function, line: Int = #line) {
          
-        let msg = generateLogMessage(message: message, error: error)
+        let msg = generateLogMessage(message: message, error: error, file: file, function: function, line: line)
         switch level {
         case .debug:
             internalLogger.debug(msg)
@@ -109,8 +109,9 @@ extension Logger: Logging {
 }
 
 extension Logger {
-    func generateLogMessage(message: String, error: NSError?) -> String {
-        var result = message
+    func generateLogMessage(message: String, error: NSError?, file: String = #file, function: String = #function, line: Int = #line) -> String {
+        let filename = URL(fileURLWithPath: file).lastPathComponent
+        var result = "[\(filename) \(function):\(line)] \(message)"
         if error != nil {
             result += " : \(error!)"
         }

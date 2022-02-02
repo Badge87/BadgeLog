@@ -12,7 +12,6 @@ public struct LogView: View {
     private var auto: Bool = true
     
     public init() {
-        refresh()
     }
     
     init(data: String) {
