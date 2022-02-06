@@ -9,6 +9,8 @@
 [![License](https://img.shields.io/cocoapods/l/BadgeLog.svg?style=flat)](https://cocoapods.org/pods/BadgeLog)
 [![Platform](https://img.shields.io/cocoapods/p/BadgeLog.svg?style=flat)](https://cocoapods.org/pods/BadgeLog)
 
+For the Android kotlin version, see [this page](https://github.com/Badge87/BadgeLogK)
+
 BadgeLog is an iOS Swift library that helps you manage logs within your application:
 
 - Centralize all log management logic
