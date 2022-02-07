@@ -7,6 +7,14 @@
 
 import Foundation
 import SwiftyBeaver
+
+/// Handle all logs logic
+///
+/// Before using it, remember to call 'Logger.setup' to initialize it. Just call once,
+/// preferably on application startup.
+///
+/// - author: Daniele Bachicchi
+///
 public final class Logger {
     public enum LogLevel: String {
             case debug
@@ -16,11 +24,14 @@ public final class Logger {
             case info
         }
     
+    /// Singleton instance of Logger class
     public static let shared: Logger = Logger()
     
+    /// Flag to enable/disable generate log into file.
     public var enableFileLogging = true
+    /// Flag to enable/disable generate log into console.
     public var enableConsoleLogging = true
-    public var enableOSLogging = true
+    /// Min level of log. Log with level under this will not be printed.
     public var minLevel: LogLevel = .verbose
     
     
@@ -30,8 +41,9 @@ public final class Logger {
     var fileLogger: FileDestination!
     var consoleLogger: ConsoleDestination!
     
+    /// Initialize Logger functionality.
+    /// set 'enableFileLogging', 'enableConsoleLogging', 'minLevel' before call 'setup()'
     public func setup(){
-        
         internalLogger.removeAllDestinations()
         consoleLogger = ConsoleDestination()
         fileLogger = FileDestination()
@@ -53,7 +65,8 @@ public final class Logger {
         
         
     }
-    
+    /// Generate a FileDocument for the saved log file.
+    /// Call this method if you want to share log file externally.
     public func generateLogDocument() -> LogFile {
         do {
         if let url = fileLogger.logFileURL{
