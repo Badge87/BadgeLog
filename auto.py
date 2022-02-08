@@ -4,7 +4,7 @@ import fileinput
 # ======================  edit by yourself  ======================
 sources = []
 
-project_name = 'BadgeLog'
+project_name = 'trunk'
 podspec_file_name = 'BadgeLog.podspec'
 
 
