@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BadgeLog'
-  s.version          = '0.2.1'
+  s.version          = '0.3'
   s.summary          = 'BadgeLog, a light lib that helps and centralize logs in your application.'
   s.swift_version    = '5.0'
 
