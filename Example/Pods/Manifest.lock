@@ -1,6 +1,5 @@
 PODS:
-  - BadgeLog (0.1.0):
-    - SwiftyBeaver
+  - BadgeLog (0.1.0)
   - FBSnapshotTestCase (2.1.4):
     - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
   - FBSnapshotTestCase/Core (2.1.4)
@@ -18,7 +17,6 @@ PODS:
     - iOSSnapshotTestCase (~> 8.0)
     - Nimble
   - Quick (4.0.0)
-  - SwiftyBeaver (1.9.5)
 
 DEPENDENCIES:
   - BadgeLog (from `../`)
@@ -34,20 +32,18 @@ SPEC REPOS:
     - Nimble
     - Nimble-Snapshots
     - Quick
-    - SwiftyBeaver
 
 EXTERNAL SOURCES:
   BadgeLog:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BadgeLog: f7fbfc9e5c52c2eaef716bb6af67ce191d55fe33
+  BadgeLog: 8c2a0e36388e821c259cafdee0d13bef43fdeab9
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   iOSSnapshotTestCase: a670511f9ee3829c2b9c23e6e68f315fd7b6790f
   Nimble: e7e615c0335ee4bf5b0d786685451e62746117d5
   Nimble-Snapshots: 97270cd48f0e6eebd6c80ccf7dd35d4e57fb9997
   Quick: 6473349e43b9271a8d43839d9ba1c442ed1b7ac4
-  SwiftyBeaver: 84069991dd5dca07d7069100985badaca7f0ce82
 
 PODFILE CHECKSUM: bcabe55b1b2d82ee6f2f7bbaa3751b5b8e472667
 

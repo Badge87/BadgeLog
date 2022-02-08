@@ -16,7 +16,7 @@ let log = Logger.shared
 struct BadgeLog_ExampleApp: App {
     
     init() {
-        log.setup()
+        log.setup(destinations: [ConsoleDestination(), FileDestination()])
     }
     
     var body: some Scene {
