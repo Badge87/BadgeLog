@@ -85,15 +85,15 @@ The default format for ConsoleDestination is:
 ```
 
 Preset Char (case sensitive) are:
-- M -> the message of the log.
-- m -> the function name where the log has been requested
-- L -> the `LogLevel` type (VERBOSE, DEBUG, INFO....)
-- l -> the line number of the file where the log has been requested
-- f -> the file name, fullpath, where the log has been requested
-- C -> the color(emoji) assigned to the `LogLevel` type
-- c -> the file name, without path, where the log has been requested
-- e -> the NSError of the log, if present.
-- T -> the date of the log, formatted with var `dateFormat` of the `LogDestination`.
+- `M` -> the message of the log.
+- `m` -> the function name where the log has been requested
+- `L` -> the `LogLevel` type (VERBOSE, DEBUG, INFO....)
+- `l` -> the line number of the file where the log has been requested
+- `f` -> the file name, fullpath, where the log has been requested
+- `C` -> the color(emoji) assigned to the `LogLevel` type
+- `c` -> the file name, without path, where the log has been requested
+- `e` -> the NSError of the log, if present.
+- `T` -> the date of the log, formatted with var `dateFormat` of the `LogDestination`.
 - " " -> empty space.
 
 ## Example
