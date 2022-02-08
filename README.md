@@ -17,6 +17,17 @@ BadgeLog is an iOS Swift library that helps you manage logs within your applicat
 - Print console logs in a nice way
 - Ability to save logs to file and export them
 
+
+## Installation
+
+BadgeLog is available through [CocoaPods](https://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod 'BadgeLog'
+```
+
+
 ## Configure
 Setting up the library is very quick and easy. You need to invoke the following method:
 
@@ -63,18 +74,6 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 - Compiled with swift 5
 - Deployment target 15.0
 
-## Installation
-
-BadgeLog is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod 'BadgeLog'
-```
-
-## External libraries
-
-- [Swift Bearer](https://github.com/SwiftyBeaver)
 
 ## Author
 
