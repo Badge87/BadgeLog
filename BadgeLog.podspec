@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BadgeLog'
-  s.version          = '0.3'
+  s.version          = '0.2'
   s.summary          = 'BadgeLog, a light lib that helps and centralize logs in your application.'
   s.swift_version    = '5.0'
 
@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Badge87' => 'bacdaniele@gmail.com' }
-  s.source           = { :git => 'https://github.com/Badge87/BadgeLog.git', :tag => s.version.to_s }
+  s.source           = { :git => 'git@github.com:Badge87/BadgeLog.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '15.0'
