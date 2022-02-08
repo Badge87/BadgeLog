@@ -4,8 +4,8 @@ import fileinput
 # ======================  edit by yourself  ======================
 sources = []
 
-project_name = 'MHRSpecRepo'
-podspec_file_name = 'MHRImporter.podspec'
+project_name = 'BadgeLog'
+podspec_file_name = 'BadgeLog.podspec'
 
 
 # ==================================================================
