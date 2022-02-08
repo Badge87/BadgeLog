@@ -66,6 +66,35 @@ Logger.shared.error("I'm an error log!", error: NSError(domain: "", code: 999, u
 
 The detailed documentation is still in progress.
 
+## Log Format
+
+For each LogDestination, you can set the format in which they will display the logs. The format is a string that can contain custom characters and preset values.
+Insert your own custom character inside apex.
+The default format is
+
+```swift
+"T '-' L '-' '['c'.'m':'l']' M e"
+
+2022-02-08T13:00:00Z - VERBOSE - [ContentView.body:18] I'm a log!
+```
+The default format for ConsoleDestination is:
+```swift
+"C L '['c'.'m':'l']' M e"
+
+📣 VERBOSE [ContentView.body:18] I'm a log!
+```
+
+Preset Char (case sensitive) are:
+- M -> the message of the log.
+- m -> the function name where the log has been requested
+- L -> the `LogLevel` type (VERBOSE, DEBUG, INFO....)
+- l -> the line number of the file where the log has been requested
+- f -> the file name, fullpath, where the log has been requested
+- C -> the color(emoji) assigned to the `LogLevel` type
+- c -> the file name, without path, where the log has been requested
+- e -> the NSError of the log, if present.
+- T -> the date of the log, formatted with var `dateFormat` of the `LogDestination`.
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
