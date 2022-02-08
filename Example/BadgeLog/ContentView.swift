@@ -46,7 +46,7 @@ struct ContentView: View {
         
         }
         .navigationTitle("BadgeLog")
-        .fileExporter(isPresented: $exportFile, document: log.generateLogDocument(), contentType: .plainText) {result in
+        .fileExporter(isPresented: $exportFile, documents: log.getLogFiles(), contentType: .plainText) {result in
             print(result)
                 
             

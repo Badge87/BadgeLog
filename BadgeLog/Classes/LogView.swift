@@ -44,7 +44,8 @@ public struct LogView: View {
     }
     
     private func  refresh(){
-        data = try! String(contentsOf: Logger.shared.fileLogger.logFileURL!).replacingOccurrences(of: "\n", with: "\n\n")
+        //TODO
+        data = Logger.shared.getLogFiles()[0].text.replacingOccurrences(of: "\n", with: "\n\n")
     }
 }
 

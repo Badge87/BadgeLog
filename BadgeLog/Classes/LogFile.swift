@@ -12,12 +12,16 @@ public struct LogFile: FileDocument {
     public static var readableContentTypes = [UTType.plainText]
     // by default our document is empty
     var text = ""
+    var name = ""
     
     public init( ) {
-        text = ""
+        self.text = ""
+        
     }
-    public init(url: URL ) throws {
-        text = try String(contentsOf: url, encoding: .utf8)
+    public init(url: URL, exportName: String? = nil ) throws {
+        self.text = try String(contentsOf: url, encoding: .utf8)
+        self.name = exportName ?? url.lastPathComponent
+        
     }
     
     public init(configuration: ReadConfiguration) throws {
@@ -27,8 +31,9 @@ public struct LogFile: FileDocument {
     }
     
     public func fileWrapper(configuration: WriteConfiguration) throws -> FileWrapper {
-        let data = Data(text.utf8)
-                return FileWrapper(regularFileWithContents: data)
+        let result = FileWrapper(regularFileWithContents: Data(text.utf8))
+        result.filename = name
+        return result
     }
     
     
